@@ -6,5 +6,10 @@ pipeline {
         sh 'java -version'
       }
     }
+    stage('Build') {
+      steps {
+        sh './mvnw -Pprod package'
+      }
+    }
   }
 }
